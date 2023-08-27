@@ -1,0 +1,24 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price integer, amount integer);
+insert into store values(1,"t-shirt",25,7); 
+insert into store values(2,"pants",20,4);
+insert into store values(3,"dress",21,2);
+insert into store values(4,"sweater",50,6);
+insert into store values(5,"hoodie",65,2);
+insert into store values(6,"shorts",4.99,10);
+insert into store values(7,"suit",200.99,1);
+insert into store values(8,"hat",16.99,6);
+insert into store values(9,"tie",20,5);
+insert into store values(10,"scarf",15.99,8);
+insert into store values(11,"cardigan",21.99,10);
+insert into store values(12,"sock",4.99,20);
+insert into store values(13,"shirt",15,20);
+insert into store values(14,"blouse",15,25);
+insert into store values(15,"sports shorts",19.99,5);
+
+--data ordered by amount.
+select*from store;
+select sum(amount) from store;
+ --know how much stock you have.
+select name,price,amount
+from store 
+order by amount asc
