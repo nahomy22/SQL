@@ -17,7 +17,7 @@ insert into store values(15,"sports shorts",19.99,5);
 
 --data ordered by amount.
 select*from store;
-select sum(amount) from store;
+select name,sum(amount) from store group by name  ;
  --know how much stock you have.
 select name,price,amount
 from store 
